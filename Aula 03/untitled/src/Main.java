@@ -9,6 +9,16 @@ public class Main {
           - Operador AND = &&
           - Operador OR = ||
           - Operador NOT = !
+
+         Comparadores Matematicos:
+          - !=
+          - ==
+
+         Estruturas Condicionais:
+          - if
+          - else
+          - else if
+
          */
 
 
