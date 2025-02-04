@@ -1,0 +1,50 @@
+EXERCÍCIO  4 – CAIXA ELETRÔNICO
+
+
+Crie um programa em Java que
+simule as operações básicas de um caixa eletrônico.
+
+
+O programa deve apresentar um
+menu interativo para o usuário escolher entre as seguintes operações:
+
+
+Verificar Saldo: Exibir o saldo
+atual.
+
+
+Depositar: Permitir que o usuário
+insira um valor para depósito e atualize o saldo.
+
+
+Sacar: Permitir que o usuário
+insira um valor para saque e atualize o saldo, se houver fundos suficientes.
+
+
+Sair: Encerrar o programa.
+
+
+
+
+
+EXERCÍCIO 5 - NÚMERO POSITIVO
+
+
+Desenvolva um programa em Java
+que simule o gerenciamento de pedidos em uma pizzaria.
+
+
+O programa deve permitir que o
+usuário realize as seguintes operações por meio de um menu interativo:
+
+
+Adicionar Pizza: Permita que o
+usuário insira o valor de uma pizza e adicione-o ao total do pedido.
+
+
+Ver Total: Exiba o valor total
+acumulado do pedido até o momento.
+
+
+Finalizar Pedido: Encerre o
+programa e mostre o total final do pedido.
