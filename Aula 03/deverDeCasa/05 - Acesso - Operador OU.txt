@@ -1,0 +1,30 @@
+public class Acesso {
+    public static void main(String[] args) {
+        String permissao = "Admin";
+        boolean autorizacao = false;
+
+        if (permissao.equals("Admin") || Autorizacao) 
+	{
+            System.out.println("Acesso permitido.");
+        } 
+	else 
+	{
+            System.out.println("Acesso negado.");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+Declarar a variável 
+
+permissao = "Admin" (variável do tipo String)
+autoriazacao = false; (variável do tipo boolean)
+
+
