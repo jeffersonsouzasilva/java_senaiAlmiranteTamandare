@@ -1,2 +1,0 @@
-Pagina para consulta sobre o metodo scanner em JAVA:
-  https://www.w3schools.com/java/java_user_input.asp

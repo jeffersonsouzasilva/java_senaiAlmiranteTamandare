@@ -1,0 +1,15 @@
+Comandos no Intellij DEA:
+
+Comando "sout" para System.out.println();
+Comando ctrl + D para duplicar a linha em baixo
+Comando ctrl + alt + i  atalho para ajuste na indentação do código
+Comando ctrl + / para comentar a linha
+
+Comando psvm para criar "public static void main(String[] args)"
+Comando main para criar este " public static void main "
+
+
+Comando alt + insert para criar nova class, porém a guia de projeto tem que estar aberta use alt + 1 para abrir
+Comando shift + F6 atalho para renomear um elemento ou todos de mesmo nome, sem a necessidade alterar um por um
+Comando alt + insert atalho que possibilita a geração de um método
+Comando ctrl + alt + o é utilizado para remover imports que não são mais usados. O Auto import pode ser configurado em Settings >> Editor >> General >> Auto import
