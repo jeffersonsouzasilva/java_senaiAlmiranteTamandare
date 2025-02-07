@@ -1,6 +1,7 @@
 Comandos no Intellij DEA:
 
 Comando "sout" para System.out.println();
+Comando "souf" para System.out.printf(); é para imprimir formatado ex = System.out.printf("minha mãe é %d mais velha do que eu!", diff); // .printf imprimir formatado, a variavel diff esta sendo substuida por %s
 Comando ctrl + D para duplicar a linha em baixo
 Comando ctrl + alt + i  atalho para ajuste na indentação do código
 Comando ctrl + / para comentar a linha
