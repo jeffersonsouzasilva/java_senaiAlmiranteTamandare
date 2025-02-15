@@ -1,0 +1,35 @@
+ABSTRAÇÃO
+Representação simplificada de entiddaes complexas
+
+ENCAPSULAMENTO
+Dados métodos são protegidos dentro do projeto
+
+HERANÇA
+Criação de novas classes a partir de classes existentes, promovendo reutilização do código
+
+POLIMORFISMO
+Objetos de diferentes classes podem responder ao mesmo método de maneiras diferentes 
+
+
+
+
+// Exemplo da Classe
+public class Carro {
+	// Campos (atributos) da Classe
+	public String Marca;
+	public String Modelo;
+	public int Ano;
+
+
+//Operação
+public class Acelerar(int aumento){
+	Velocidade += aumento;
+	Console.WriteLine(" o carro esta Acelerendo. Velocidade atual: ");
+	Console.WriteLine(" ...");
+}
+
+
+
+Polimorfismo Estático(Sobrecarga de Método): Definir múltiplos métodos com o mesmo nome, mas com diferentes parâmetros. O compilador escolhe qual método usar com base nos argumentos fornecidos durante a chamada.
+
+Polimorfismo Dinâmico(Sobrescrita de Método): Uma classe derivada pode sobreescrever um método da classe base, fornecendo uma implementação específica. Durante a execução, o método da classe do objeto em questão é chamado, mesmo que a base referência seja do tipo da classe base.
