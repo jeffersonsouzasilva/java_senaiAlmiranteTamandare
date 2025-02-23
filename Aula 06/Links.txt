@@ -1,0 +1,7 @@
+https://www.w3schools.com/sql/sql_sum.asp
+
+https://www.w3schools.com/MySQL/mysql_alter.asp
+
+https://medium.com/@desenvolvedormateusbarbosa/comandos-b%C3%A1sicos-mysql-20631b888634
+
+https://www.hashtagtreinamentos.com/comandos-em-sql?psafe_param=1&gad_source=1&gclid=CjwKCAiAiOa9BhBqEiwABCdG85LL2C3HJe9krkL83QfFa4lamyq4qYq8u3fTSjaKmqJXhy6gcsxUxRoCmssQAvD_BwE#9-delete-from

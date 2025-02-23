@@ -1,0 +1,8 @@
+O que caracteriza o BD -- Escalabilidade, Multiusuário, Segurança e acesso
+
+
+BD Relacionais e Não Relacionais
+
+NoSQL -- Projetados para armazenar dados não estruturado ou semiestruturado
+
+Sistema de gerenciamento de banco de dados (JDBC) -- O MySQL é JDBC e um dos banco de dados relacionais mais populares
