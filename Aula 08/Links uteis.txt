@@ -1,0 +1,18 @@
+Sobrescrita:
+ https://www.devmedia.com.br/sobrescrita-e-sobrecarga-de-metodos-em-java/22603
+ https://cursos.alura.com.br/forum/topico-sobrescrita-e-sobrecarga-de-metodos-qual-a-diferenca-e-para-o-que-servem-73090
+ https://www.jdevtreinamento.com.br/anotacao-override-para-que-serve/
+ 
+
+Sobrecarga:
+ https://www.dio.me/articles/java-overloading-sobrecarga
+ https://www.if.ufrgs.br/~betz/jaulas/aula5.htm
+ https://maykosilva.com/blog/sobrecarga-de-metodos-em-java-para-iniciantes-entenda-como-funciona/#:~:text=Entendendo%20o%20M%C3%A9todo%20de%20Sobrecarga%20em%20Java:,crian%C3%A7as%20ou%20talvez%20frutas%20para%20os%20adultos.
+ https://sites.google.com/view/javacommiza/home/capitulo-04/m%C3%A9todos-sobrecarga
+ https://pt.stackoverflow.com/questions/189895/quais-s%C3%A3o-as-diferen%C3%A7as-entre-overrideing-e-overloading-no-java#:~:text=Overload(ing),um%20com%20sua%20pr%C3%B3pria%20implementa%C3%A7%C3%A3o.
+ https://pt.stackoverflow.com/questions/248139/fazer-sobrecarga-de-m%C3%A9todos-%C3%A9-menos-perform%C3%A1tico#:~:text=A%20sobrecarga%20deve%20ser%20usada,portanto%20de%20formas%20ligeiramente%20diferentes.
+ https://www.devmedia.com.br/introducao-sobrecarga-de-metodos-e-tipos-genericos-em-java/22853
+ https://pt.stackoverflow.com/questions/310083/sobrecarga-de-m%C3%A9todo-%C3%A9-polimorfismo
+ 
+
+Funções
