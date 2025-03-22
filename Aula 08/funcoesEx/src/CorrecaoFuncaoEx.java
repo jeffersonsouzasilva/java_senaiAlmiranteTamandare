@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
 public class CorrecaoFuncaoEx {
+    /*
+    Função para calcular Média
+    crie uma função chamada CalcularMedia que receba os números como parãmetro e
+      retorne a média aritmédica desses números
+     */
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -44,6 +50,6 @@ public class CorrecaoFuncaoEx {
     }
 
     public static double CalcularMedia(double soma, int quantidade){
-        return soma / quantidade; // Clacular Média
+        return soma / quantidade; // Calcular Média
     }
 }
