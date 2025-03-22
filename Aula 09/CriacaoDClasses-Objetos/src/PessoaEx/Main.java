@@ -1,0 +1,11 @@
+package PessoaEx;
+
+
+/*
+Seguem os códigos para criação da classe Pessoa e Main.
+O código valida a idade para fazer a modificação.
+Observar o setIdade na classe Pessoa.
+ */
+
+public class Main {
+}
