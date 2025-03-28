@@ -15,6 +15,6 @@ Clicar com o botão direito no package abstracao, New, Class, e escolher Interfa
 public interface Pessoa {
     String getNome();
     void setNome(String nome);
-    String getDomento();
+    String getDocumento();
     void setDocumento(String documento);
 }
