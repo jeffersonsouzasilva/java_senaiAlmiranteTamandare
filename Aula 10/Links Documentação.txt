@@ -1,0 +1,10 @@
+documentação de java math:
+
+   https://www.datacamp.com/pt/doc/java/java-math
+   https://caffeinealgorithm.com/blog/classe-math-em-java
+   https://www.ionos.com/pt-br/digitalguide/sites-de-internet/desenvolvimento-web/java-math/
+
+
+
+Documentação Java Date and Time:
+   https://www.w3schools.com/java/java_date.asp
