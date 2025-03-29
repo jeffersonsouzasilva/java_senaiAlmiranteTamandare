@@ -1,0 +1,74 @@
+﻿Classe NumberFormat 
+Crie um programa que solicite ao usuário a inserção de um valor em reais. Converta esse valor para ienes e euros, de acordo com a cotação atual. Utilizando a classe NumberFormat, exiba os valores convertidos de acordo com as moedas locais.
+
+
+==============================================================================================================
+
+
+import java.text.NumberFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+
+public class ConversorMoedas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        // Solicitar o valor em reais
+        System.out.println("Digite o valor em reais (R$):");
+        double valorReais = scanner.nextDouble();
+
+
+        // Cotações atuais (exemplo: 1 BRL = 26.03 JPY, 1 BRL = 0.16 EUR)
+        double cotacaoIene = 26.03;
+        double cotacaoEuro = 0.16;
+
+
+        // Converter para ienes e euros
+        double valorIenes = valorReais * cotacaoIene;
+        double valorEuros = valorReais * cotacaoEuro;
+
+
+        // Formatar os valores para as moedas locais
+        NumberFormat formatoIene = NumberFormat.getCurrencyInstance(Locale.JAPAN);
+        NumberFormat formatoEuro = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        NumberFormat formatoReal = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+
+
+        // Exibir os resultados
+        System.out.println("Valor em reais: " + formatoReal.format(valorReais));
+        System.out.println("Valor em ienes: " + formatoIene.format(valorIenes));
+        System.out.println("Valor em euros: " + formatoEuro.format(valorEuros));
+
+
+        scanner.close();
+    }
+}
+
+
+==============================================================================================================
+
+
+Entrada do usuário: O programa solicita que o usuário insira um valor em reais.
+
+
+Cotações: As cotações de ienes e euros são definidas como constantes no código. Você pode atualizá-las conforme necessário.
+
+
+Conversão: Multiplicamos o valor em reais pelas cotações para obter os valores em ienes e euros.
+
+
+Formatação: Utilizamos NumberFormat.getCurrencyInstance para formatar os valores de acordo com as moedas locais:
+
+
+Locale.JAPAN para ienes.
+
+
+Locale.FRANCE para euros.
+
+
+new Locale("pt", "BR") para reais.
+
+
+Exibição: Os valores formatados são exibidos no console.

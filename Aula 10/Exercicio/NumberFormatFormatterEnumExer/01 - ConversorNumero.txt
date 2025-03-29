@@ -1,0 +1,52 @@
+﻿Classe NumberFormat 
+Crie um programa que receba uma string representando um número com vírgulas e pontos e converta esse valor para um número decimal.
+
+
+===========================================================================================================================
+
+
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.Locale;
+
+
+public class ConversorNumero {
+    public static void main(String[] args) {
+        // String representando um número com vírgulas e pontos
+        String numeroString = "1.234,56"; // Exemplo de número no formato brasileiro
+
+
+        // Definir o formato do número com base na localidade (Brasil neste caso)
+        NumberFormat formatoBrasileiro = NumberFormat.getInstance(new Locale("pt", "BR"));
+
+
+        try {
+            // Converter a string para um número
+            Number numero = formatoBrasileiro.parse(numeroString);
+
+
+            // Exibir o número como decimal
+            System.out.println("Número convertido: " + numero.doubleValue());
+        } catch (ParseException e) {
+            System.out.println("Erro ao converter a string para número. Verifique o formato.");
+        }
+    }
+}
+
+
+===========================================================================================================================
+
+
+Entrada da String: A string numeroString contém o número no formato brasileiro (com vírgula como separador decimal e ponto como separador de milhar).
+
+
+NumberFormat e Locale: Utilizamos NumberFormat.getInstance(Locale) para criar um formatador baseado na localidade desejada, neste caso, o formato brasileiro (pt-BR).
+
+
+Conversão com parse: O método parse converte a string para um objeto Number.
+
+
+Obtenção do valor decimal: Usamos numero.doubleValue() para obter o valor decimal do número.
+
+
+Tratamento de erro: Incluímos um try-catch para lidar com possíveis erros de formatação, caso a string não esteja no formato esperado.

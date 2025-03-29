@@ -1,0 +1,53 @@
+﻿Classe Math 
+Calcular o seno, cosseno e tangente de um ângulo fornecido pelo usuário.
+
+
+=================================================================================================
+
+
+import java.util.Scanner;
+
+
+public class CalculadoraTrigonometrica {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.println("Digite o ângulo em graus:");
+        double anguloGraus = scanner.nextDouble();
+
+
+        // Converter o ângulo para radianos, já que a classe Math trabalha com radianos
+        double anguloRadianos = Math.toRadians(anguloGraus);
+
+
+        // Calcular seno, cosseno e tangente
+        double seno = Math.sin(anguloRadianos);
+        double cosseno = Math.cos(anguloRadianos);
+        double tangente = Math.tan(anguloRadianos);
+
+
+        // Exibir os resultados
+        System.out.printf("Seno: %.4f%n", seno);
+        System.out.printf("Cosseno: %.4f%n", cosseno);
+        System.out.printf("Tangente: %.4f%n", tangente);
+
+
+        scanner.close();
+    }
+}
+
+
+=================================================================================================
+
+
+O programa solicita ao usuário que insira um ângulo em graus.
+
+
+Converte o ângulo de graus para radianos usando Math.toRadians(), já que as funções trigonométricas da classe Math trabalham com radianos.
+
+
+Usa as funções Math.sin(), Math.cos() e Math.tan() para calcular, respectivamente, o seno, cosseno e tangente.
+
+
+Imprime os resultados formatados com 4 casas decimais.

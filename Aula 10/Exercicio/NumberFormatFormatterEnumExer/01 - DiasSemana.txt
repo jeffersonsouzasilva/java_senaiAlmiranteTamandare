@@ -1,0 +1,57 @@
+﻿Enumerações 
+Defina uma enumeração para os dias da semana e crie um programa que receba um número (1-7) e exiba o dia correspondente.
+
+
+==========================================================================================
+
+
+import java.util.Scanner;
+
+
+public class DiasSemana {
+    // Enumeração para os dias da semana
+    public enum DiaSemana {
+        DOMINGO, SEGUNDA, TERCA, QUARTA, QUINTA, SEXTA, SABADO;
+    }
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        // Solicitar ao usuário um número entre 1 e 7
+        System.out.println("Digite um número de 1 a 7 para representar o dia da semana:");
+        int numero = scanner.nextInt();
+
+
+        // Verificar se o número está dentro do intervalo válido
+        if (numero < 1 || numero > 7) {
+            System.out.println("Número inválido. Por favor, insira um número entre 1 e 7.");
+        } else {
+            // Obter o dia correspondente utilizando valores da enum
+            DiaSemana dia = DiaSemana.values()[numero - 1];
+            System.out.println("O dia correspondente é: " + dia);
+        }
+
+
+        scanner.close();
+    }
+}
+
+
+==========================================================================================
+
+
+Enumeração DiaSemana: Define os dias da semana como constantes (DOMINGO, SEGUNDA, ...).
+
+
+Método values(): Retorna um array com todos os valores da enumeração, permitindo acessar o dia pelo índice.
+
+
+Entrada do usuário: Solicita um número entre 1 e 7.
+
+
+Verificação: Certifica que o número está no intervalo válido (1-7) antes de acessar o array da enumeração.
+
+
+Exibição: Usa o índice numero - 1 para selecionar o dia correspondente e o exibe no console.

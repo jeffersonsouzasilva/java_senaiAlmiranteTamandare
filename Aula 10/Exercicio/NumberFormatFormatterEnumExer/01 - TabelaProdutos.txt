@@ -1,0 +1,76 @@
+﻿Classe Formatter 
+Crie um programa que formate e exiba os detalhes de um produto (nome, preço, quantidade em estoque) em uma tabela de texto.
+
+
+===========================================================================================================================
+
+
+import java.util.Formatter;
+
+
+public class TabelaProdutos {
+    public static void main(String[] args) {
+        // Detalhes do produto
+        String nomeProduto1 = "Notebook";
+        double precoProduto1 = 3599.99;
+        int quantidadeProduto1 = 15;
+
+
+        String nomeProduto2 = "Smartphone";
+        double precoProduto2 = 1999.90;
+        int quantidadeProduto2 = 30;
+
+
+        String nomeProduto3 = "Mouse";
+        double precoProduto3 = 79.99;
+        int quantidadeProduto3 = 50;
+
+
+        // Criar e formatar a tabela
+        Formatter formatter = new Formatter();
+
+
+        formatter.format("%-20s %-10s %-10s%n", "Produto", "Preço (R$)", "Quantidade");
+        formatter.format("%-20s %-10s %-10s%n", "-------------------", "----------", "----------");
+        formatter.format("%-20s %-10.2f %-10d%n", nomeProduto1, precoProduto1, quantidadeProduto1);
+        formatter.format("%-20s %-10.2f %-10d%n", nomeProduto2, precoProduto2, quantidadeProduto2);
+        formatter.format("%-20s %-10.2f %-10d%n", nomeProduto3, precoProduto3, quantidadeProduto3);
+
+
+        // Exibir a tabela
+        System.out.println(formatter);
+
+
+        formatter.close();
+    }
+}
+
+
+===========================================================================================================================
+
+
+Classe Formatter: Usamos essa classe para formatar os dados em uma tabela estruturada.
+
+
+Formatos de Coluna:
+
+
+%s: Representa texto.
+
+
+%10.2f: Representa um número decimal com 2 casas decimais e largura total de 10 caracteres.
+
+
+%d: Representa números inteiros.
+
+
+%n: Representa uma quebra de linha.
+
+
+%-20s: Ajusta o texto à esquerda ocupando no máximo 20 caracteres.
+
+
+Cabeçalhos e Linhas: Criamos um cabeçalho para a tabela e adicionamos linhas para cada produto com detalhes formatados.
+
+
+Saída: O programa imprime a tabela no console.

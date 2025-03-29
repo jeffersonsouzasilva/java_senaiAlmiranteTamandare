@@ -1,0 +1,35 @@
+﻿Classe Random 
+Gerar 10 números inteiros aleatórios entre 1 e 50.
+
+
+===============================================================================
+
+
+import java.util.Random;
+
+
+public class GeradorNumerosAleatorios {
+    public static void main(String[] args) {
+        Random random = new Random();
+
+
+        System.out.println("10 números inteiros aleatórios entre 1 e 50:");
+        for (int i = 0; i < 10; i++) {
+            // Gerar números aleatórios no intervalo de 1 a 50
+            int numeroAleatorio = random.nextInt(50) + 1;
+            System.out.println(numeroAleatorio);
+        }
+    }
+}
+
+
+===============================================================================
+
+
+Instância da classe Random: Criamos um objeto Random para gerar os números aleatórios.
+
+
+Intervalo de 1 a 50: O método nextInt(50) gera números entre 0 e 49. Adicionamos 1 ao resultado para ajustar o intervalo para 1 a 50.
+
+
+Laço for: Usamos um laço para repetir o processo 10 vezes, imprimindo cada número gerado.

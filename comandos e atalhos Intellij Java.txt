@@ -14,3 +14,6 @@ Comando alt + insert para criar nova class, porém a guia de projeto tem que est
 Comando shift + F6 atalho para renomear um elemento ou todos de mesmo nome, sem a necessidade alterar um por um
 Comando alt + insert atalho que possibilita a geração de um método
 Comando ctrl + alt + o é utilizado para remover imports que não são mais usados. O Auto import pode ser configurado em Settings >> Editor >> General >> Auto import
+
+Comando Alt + Shift + ponto para aumentar o tamanho da fonte 
+Comando Alt + Shift + 0 para diminuir o tamanho da fonte 

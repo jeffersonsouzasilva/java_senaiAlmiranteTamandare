@@ -1,0 +1,16 @@
+package Heranca;
+
+// Classe principal (Main)
+public class Main {
+    public static void main(String[] args) {
+        // Instanciar um objeto Cachorro
+        Cachorro meuCachorro = new Cachorro("Rex", 3, "Labrador");
+
+
+        // Definir atributos e chamar métodos
+        meuCachorro.exibirInformacoes();  // Herança da classe Animal
+        meuCachorro.mostrarRaca();        // Método específico do Cachorro
+        meuCachorro.emitirSom();          // Método sobrescrito
+        meuCachorro.correr();             // Método adicional
+    }
+}

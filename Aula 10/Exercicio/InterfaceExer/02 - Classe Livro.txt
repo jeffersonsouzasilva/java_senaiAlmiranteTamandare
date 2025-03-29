@@ -1,0 +1,36 @@
+﻿// Classe Livro implementando a interface Produto
+class Livro implements Produto {
+    // Atributos específicos de um livro
+    private String nome;
+    private String autor;
+    private double preco;
+
+
+    // Construtor para inicializar os atributos
+    public Livro(String nome, String autor, double preco) {
+        this.nome = nome;
+        this.autor = autor;
+        this.preco = preco;
+    }
+
+
+    // Implementação dos métodos da interface
+    @Override
+    public String getNome() {
+        return nome;
+    }
+
+
+    @Override
+    public double getPreco() {
+        return preco;
+    }
+
+
+    @Override
+    public void exibirDetalhes() {
+        System.out.println("Livro: " + nome);
+        System.out.println("Autor: " + autor);
+        System.out.println("Preço: R$" + preco);
+    }
+}

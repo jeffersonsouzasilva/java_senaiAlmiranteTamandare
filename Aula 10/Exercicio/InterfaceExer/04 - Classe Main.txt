@@ -1,0 +1,13 @@
+﻿// Classe principal (Main)
+public class Main {
+    public static void main(String[] args) {
+        // Criar instâncias de Livro e Eletronico
+        Produto livro = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 59.90);
+        Produto eletronico = new Eletronico("Smartphone", "Samsung", 2500.00);
+
+
+        // Exibir detalhes dos produtos
+        livro.exibirDetalhes();
+        eletronico.exibirDetalhes();
+    }
+}
