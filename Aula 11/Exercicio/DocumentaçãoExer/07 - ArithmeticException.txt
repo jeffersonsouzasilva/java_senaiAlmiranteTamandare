@@ -1,0 +1,22 @@
+﻿A ArithmeticException é uma exceção em Java que ocorre quando há um erro durante uma operação aritmética. Em geral, essa exceção é lançada automaticamente pela JVM (Java Virtual Machine) quando uma operação matemática é inválida ou indefinida.
+
+
+==========================================================================
+
+
+public class ExemploArithmeticException {
+    public static void main(String[] args) {
+        try {
+            int dividendo = 10;
+            int divisor = 0; // Isso causará uma ArithmeticException
+
+
+            // Tentativa de divisão por zero
+            int resultado = dividendo / divisor;
+            System.out.println("O resultado é: " + resultado);
+        } catch (ArithmeticException e) {
+            // Tratamento da exceção
+            System.out.println("Erro: Divisão por zero não é permitida.");
+        }
+    }
+}

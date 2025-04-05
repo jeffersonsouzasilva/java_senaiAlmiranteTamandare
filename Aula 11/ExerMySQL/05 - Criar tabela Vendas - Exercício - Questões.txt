@@ -1,0 +1,10 @@
+﻿01) select para saber a quantidade comprada por cliente
+
+
+02) select para saber quanto foi comprado no Mês
+
+
+03) select para saber quanto foi comprado por estado
+
+
+04) select para saber quanto foi comprado por segmento

@@ -1,0 +1,20 @@
+﻿A NullPointerException é uma exceção em Java que ocorre quando você tenta acessar ou manipular um objeto que está com valor null. Em outras palavras, acontece quando o código tenta usar uma referência que não aponta para nenhum objeto válido na memória.
+
+
+O NullPointerException é um dos erros mais comuns em Java, mas com boas práticas de programação, você pode evitá-lo e tornar seu código mais robusto e seguro.
+
+
+==============================================================================================
+
+
+
+
+public class ExemploNullPointer {
+    public static void main(String[] args) {
+        String texto = null; // A variável "texto" não foi inicializada com um valor válido.
+
+
+        // Aqui tentamos acessar o método length() em uma referência nula.
+        System.out.println("O tamanho do texto é: " + texto.length());
+    }
+}

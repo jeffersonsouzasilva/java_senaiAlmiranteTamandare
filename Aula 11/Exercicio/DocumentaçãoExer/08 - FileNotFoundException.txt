@@ -1,0 +1,32 @@
+﻿A FileNotFoundException é uma exceção em Java que ocorre quando o código tenta abrir ou acessar um arquivo que não existe ou que está inacessível. Essa exceção é uma subclasse de IOException, e geralmente indica que o arquivo especificado pelo caminho fornecido não foi encontrado no sistema.
+
+
+==================================================
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+
+public class ExemploFileNotFoundException {
+    public static void main(String[] args) {
+        try {
+            // Tenta abrir um arquivo que não existe
+            File arquivo = new File("arquivo_inexistente.txt");
+            Scanner leitor = new Scanner(arquivo); // Lança FileNotFoundException
+
+
+            // Se o arquivo fosse encontrado, o código abaixo seria executado
+            while (leitor.hasNextLine()) {
+                System.out.println(leitor.nextLine());
+            }
+            leitor.close();
+
+
+        } catch (FileNotFoundException e) {
+            // Trata a exceção de arquivo não encontrado
+            System.out.println("Erro: O arquivo não foi encontrado. Verifique o caminho ou o nome do arquivo.");
+        }
+    }
+}

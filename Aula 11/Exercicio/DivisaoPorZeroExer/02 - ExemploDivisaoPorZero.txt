@@ -1,0 +1,27 @@
+﻿import java.util.Scanner;
+
+
+public class ExemploDivisaoPorZero {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        try {
+            System.out.print("Digite o numerador: ");
+            int numerador = scanner.nextInt();
+            
+            System.out.print("Digite o denominador: ");
+            int denominador = scanner.nextInt();
+
+
+            // Este código pode lançar uma ArithmeticException se o denominador for zero
+            int resultado = numerador / denominador;
+            System.out.println("Resultado: " + resultado);
+            
+        } catch (ArithmeticException e) {
+            // Este código é executado se uma exceção ocorrer
+            System.out.println("Erro: Não é possível dividir por zero!");
+        }
+        
+        scanner.close();
+    }
+}

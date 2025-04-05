@@ -1,0 +1,15 @@
+﻿A ArrayIndexOutOfBoundsException é uma exceção em Java que ocorre quando você tenta acessar um índice de um array que está fora dos limites válidos. Ou seja, ela acontece quando o código tenta acessar uma posição que não existe no array, seja por usar um índice negativo ou um índice maior ou igual ao tamanho do array.
+
+
+==============================================================
+
+
+public class ExemploArrayIndexOutOfBounds {
+    public static void main(String[] args) {
+        int[] numeros = {10, 20, 30}; // Array com 3 elementos (índices válidos: 0, 1, 2)
+
+
+        // Aqui tentamos acessar um índice inválido (fora dos limites)
+        System.out.println("Elemento na posição 4: " + numeros[4]); // Exceção será lançada
+    }
+}
