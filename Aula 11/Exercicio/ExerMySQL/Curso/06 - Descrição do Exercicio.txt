@@ -1,0 +1,6 @@
+Segue exercício:
+
+01) criar uma tabela para armazenar cod_curso, nome_curso, periodo, valor
+02) popular a tabela com alguns registros em diferentes periodos, manhã, tarde e noite, e valor de 1000 ate 2000
+03) fazer um update na tabela para criação do campo estado
+04) após realizar update precisamos atualizar a coluna estado com os seguintes critérios, para o período manhã o estado deve ser São Paulo, para o período tarde o estado deve ser Rio de Janeiro e para o período noite deve ser Minas Gerais
