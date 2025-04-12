@@ -1,0 +1,216 @@
+﻿import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.HashMap;
+
+
+public class Excluir {
+    private static HashMap<String, String> usersDatabase = new HashMap<>();
+
+
+    public static void main(String[] args) {
+        // Adicionando usuários ao "banco de dados"
+        usersDatabase.put("admin", "12345");
+        usersDatabase.put("user", "senha");
+
+
+        // Criando a tela de login
+        JFrame loginFrame = new JFrame("Login");
+        loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        loginFrame.setSize(300, 200);
+
+
+        JPanel loginPanel = new JPanel();
+        loginFrame.add(loginPanel);
+        colocarComponentesLogin(loginPanel, loginFrame);
+
+
+        loginFrame.setVisible(true);
+    }
+
+
+    private static void colocarComponentesLogin(JPanel panel, JFrame loginFrame) {
+        panel.setLayout(null);
+
+
+        // Label Usuário
+        JLabel userLabel = new JLabel("Usuário:");
+        userLabel.setBounds(10, 20, 80, 25);
+        panel.add(userLabel);
+
+
+        // Campo de Texto Usuário
+        JTextField userText = new JTextField(20);
+        userText.setBounds(100, 20, 165, 25);
+        panel.add(userText);
+
+
+        // Label Senha
+        JLabel passwordLabel = new JLabel("Senha:");
+        passwordLabel.setBounds(10, 50, 80, 25);
+        panel.add(passwordLabel);
+
+
+        // Campo de Senha
+        JPasswordField passwordText = new JPasswordField(20);
+        passwordText.setBounds(100, 50, 165, 25);
+        panel.add(passwordText);
+
+
+        // Botão Login
+        JButton loginButton = new JButton("Login");
+        loginButton.setBounds(10, 80, 100, 25);
+        panel.add(loginButton);
+
+
+        // Mensagem de Status
+        JLabel statusLabel = new JLabel("");
+        statusLabel.setBounds(10, 110, 250, 25);
+        panel.add(statusLabel);
+
+
+        // Ação do botão de login
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String user = userText.getText();
+                String password = new String(passwordText.getPassword());
+
+
+                if (usersDatabase.containsKey(user) && usersDatabase.get(user).equals(password)) {
+                    statusLabel.setText("Login bem-sucedido!");
+                    loginFrame.dispose(); // Fecha a janela de login
+                    abrirMenuPrincipal(); // Abre o menu principal
+                } else {
+                    statusLabel.setText("Usuário ou senha inválidos.");
+                }
+            }
+        });
+    }
+
+
+    private static void abrirMenuPrincipal() {
+        JFrame menuFrame = new JFrame("Menu Principal");
+        menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        menuFrame.setSize(400, 300);
+
+
+        JMenuBar menuBar = new JMenuBar();
+
+
+        // Menu Cadastro
+        JMenu cadastroMenu = new JMenu("Cadastro");
+        JMenuItem novoCadastro = new JMenuItem("Novo Cadastro");
+        JMenuItem excluirCadastro = new JMenuItem("Excluir Cadastro");
+        cadastroMenu.add(novoCadastro);
+        cadastroMenu.add(excluirCadastro);
+
+
+        // Menu Relatório
+        JMenu relatorioMenu = new JMenu("Relatórios");
+        JMenuItem gerarRelatorio = new JMenuItem("Gerar Relatório");
+        relatorioMenu.add(gerarRelatorio);
+
+
+        // Adicionando menus à barra
+        menuBar.add(cadastroMenu);
+        menuBar.add(relatorioMenu);
+
+
+        // Adicionando barra de menu ao frame
+        menuFrame.setJMenuBar(menuBar);
+
+
+        // Configuração da ação para o botão "Novo Cadastro"
+        novoCadastro.addActionListener(e -> JOptionPane.showMessageDialog(menuFrame, "Abrir tela de cadastro..."));
+
+
+        // Configuração da ação para o botão "Excluir Cadastro"
+        excluirCadastro.addActionListener(e -> abrirTelaExclusao());
+
+
+        // Configuração da ação para gerar relatório
+        gerarRelatorio.addActionListener(e -> JOptionPane.showMessageDialog(menuFrame, "Gerar relatório..."));
+
+
+        menuFrame.setVisible(true);
+    }
+
+
+    private static void abrirTelaExclusao() {
+        JFrame exclusaoFrame = new JFrame("Excluir Cadastro");
+        exclusaoFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        exclusaoFrame.setSize(300, 150);
+
+
+        JPanel panel = new JPanel();
+        panel.setLayout(null);
+
+
+        // Campo Código
+        JLabel codigoLabel = new JLabel("Código:");
+        codigoLabel.setBounds(10, 20, 80, 25);
+        panel.add(codigoLabel);
+
+
+        JTextField codigoField = new JTextField();
+        codigoField.setBounds(100, 20, 165, 25);
+        panel.add(codigoField);
+
+
+        // Botão Excluir
+        JButton excluirButton = new JButton("Excluir");
+        excluirButton.setBounds(100, 60, 100, 25);
+        panel.add(excluirButton);
+
+
+        // Ação do botão Excluir
+        excluirButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String codigo = codigoField.getText();
+
+
+                // Verificar se o código existe no "banco de dados"
+                if (usersDatabase.containsKey(codigo)) {
+                    usersDatabase.remove(codigo);
+                    JOptionPane.showMessageDialog(exclusaoFrame, "Cadastro excluído com sucesso!");
+                } else {
+                    JOptionPane.showMessageDialog(exclusaoFrame, "Código não encontrado.", "Erro", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
+
+        exclusaoFrame.add(panel);
+        exclusaoFrame.setVisible(true);
+    }
+}
+
+
+===========================================================================================================================
+
+
+O que foi adicionado:
+Função para exclusão:
+
+
+Foi criada a tela Excluir Cadastro onde o usuário insere um código.
+
+
+Ao clicar em "Excluir", o sistema verifica se o código existe no banco de dados e o exclui.
+
+
+Atualização do Menu Principal:
+
+
+Adicionada a opção Excluir Cadastro no menu "Cadastro".
+
+
+Esta opção abre a tela de exclusão.
+
+
+Verificação de Código:
+
+
+O sistema utiliza o HashMap para simular o banco de dados e excluir o cadastro associado ao código inserido.

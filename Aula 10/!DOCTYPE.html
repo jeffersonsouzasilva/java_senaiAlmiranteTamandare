@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controle do Robô via BLE</title>
+    <style>
+        body { font-family: Arial; background: #121212; color: white; padding: 20px; }
+        button { background: #6a0dad; color: white; border: none; padding: 12px; margin: 8px; border-radius: 8px; }
+        #status { padding: 10px; margin: 10px 0; background: #333; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🤖 Controle do Robô (ESP32 BLE)</h1>
+    <button id="connectBtn">🔵 Conectar BLE</button>
+    <div id="status">Status: Desconectado</div>
+    <button id="xPlus" disabled>X+</button>
+    <button id="xMinus" disabled>X-</button>
+
+    <script>
+        let device;
+        let characteristic;
+        const connectBtn = document.getElementById('connectBtn');
+        const statusDiv = document.getElementById('status');
+
+        // Conectar ao ESP32 via BLE
+        connectBtn.addEventListener('click', async () => {
+            try {
+                device = await navigator.bluetooth.requestDevice({
+                    filters: [{ name: 'Robô-ESP32' }], // Nome do dispositivo BLE
+                    optionalServices: [SERVICE_UUID] // Mesmo UUID do ESP32
+                });
+
+                const server = await device.gatt.connect();
+                const service = await server.getPrimaryService(SERVICE_UUID);
+                characteristic = await service.getCharacteristic(CHARACTERISTIC_UUID);
+
+                statusDiv.textContent = "Status: Conectado!";
+                statusDiv.style.background = "#4CAF50";
+                document.getElementById('xPlus').disabled = false;
+                document.getElementById('xMinus').disabled = false;
+                connectBtn.textContent = "✔ Conectado";
+
+                // Ouvir notificações (opcional)
+                characteristic.startNotifications();
+                characteristic.addEventListener('characteristicvaluechanged', (e) => {
+                    const value = new TextDecoder().decode(e.target.value);
+                    console.log("ESP32 diz:", value);
+                });
+
+            } catch (err) {
+                statusDiv.textContent = `Erro: ${err.message}`;
+                statusDiv.style.background = "#F44336";
+                console.error("Falha na conexão:", err);
+            }
+        });
+
+        // Enviar comandos para o ESP32
+        async function sendCommand(command) {
+            if (!characteristic) {
+                alert("Conecte-se ao BLE primeiro!");
+                return;
+            }
+            const encoder = new TextEncoder();
+            await characteristic.writeValue(encoder.encode(command));
+            console.log("Comando enviado:", command);
+        }
+
+        // Botões de controle
+        document.getElementById('xPlus').addEventListener('click', () => sendCommand("X+"));
+        document.getElementById('xMinus').addEventListener('click', () => sendCommand("X-"));
+    </script>
+</body>
+</html>
