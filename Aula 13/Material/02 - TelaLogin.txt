@@ -1,0 +1,25 @@
+﻿import com.mycompany.sistemacontrole.ModuloConexao.ModuloConexao;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+
+public class TelaLogin extends javax.swing.JFrame {
+    Connection conexao = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
+    
+    /**
+     * Creates new form TelaLogin
+     */
+    public TelaLogin() {
+        initComponents();
+        conexao = ModuloConexao.conector();
+        //linha abaixo server de apoio para o desenvolvimento
+        //System.out.println(conexao);
+        if(conexao != null){
+            lblStatus.setText("Conecatado");
+        } else {
+            lblStatus.setText("Não conecatado");
+        }
+    }

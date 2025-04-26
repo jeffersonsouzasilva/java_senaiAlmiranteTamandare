@@ -1,0 +1,55 @@
+﻿1. Baixar o MySQL Installer P@$$w)rd
+Acesse o site oficial do MySQL aqui e baixe o MySQL Installer.
+
+
+Escolha a versão MySQL Community (gratuita).
+
+
+2. Executar o Instalador
+Após o download, execute o instalador como administrador.
+
+
+Escolha a opção de instalação:
+
+
+Full: Inclui o servidor MySQL, Workbench, Shell e conectores.
+
+
+3. Configurar o Servidor MySQL
+Durante a instalação, configure o servidor:
+
+
+Escolha o tipo de configuração (geralmente Standalone MySQL Server).
+
+
+Defina a porta padrão (3306).
+
+
+Configure a autenticação e crie uma senha para o usuário root.
+
+
+4. Configurar o MySQL Workbench
+Após a instalação, abra o MySQL Workbench.
+
+
+Configure uma nova conexão com o servidor:
+
+
+Hostname: localhost.
+
+
+Porta: 3306.
+
+
+Usuário: root.
+
+
+Senha: A senha definida durante a instalação.
+
+
+5. Testar a Conexão
+No MySQL Workbench, clique em Test Connection para verificar se a conexão com o servidor está funcionando.
+
+
+6. Finalizar
+Após testar a conexão, você pode começar a criar e gerenciar bancos de dados no MySQL Workbench.

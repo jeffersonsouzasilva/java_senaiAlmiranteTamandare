@@ -1,0 +1,14 @@
+﻿Alterar a label do data
+Clicar na tela princial com o botão direito => Events => Window => Window Activated
+
+
+Vai ser aberto o método
+
+
+   private void formWindowActivated(java.awt.event.WindowEvent evt) {
+        // o código abaixo substitui a label data com a data do sistema
+        Date data = new Date();
+        //lblData.setText(data.toString());
+        DateFormat formatador = DateFormat.getDateInstance(DateFormat.SHORT);
+        lblData.setText(formatador.format(data));        
+    }

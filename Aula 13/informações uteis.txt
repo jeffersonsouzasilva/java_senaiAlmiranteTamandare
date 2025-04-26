@@ -1,0 +1,9 @@
+Para criar um Diagrama do banco de dados no MySQL:
+ aba de database ou CTRL + R -> reverse engineer
+
+
+Senha SQL: Sen@i2025
+
+
+Pesquisar mysql maven
+  MySQL Connector Java -> procurar um conector para adicionar ao projeto -> no pom.xml
