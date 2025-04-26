@@ -70,11 +70,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menCadUsu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.ALT_DOWN_MASK));
         menCadUsu.setText("Usuarios");
+        menCadUsu.setEnabled(false);
         menCad.add(menCadUsu);
 
         jMenuBar1.add(menCad);
 
         menRel.setText("Relatório");
+        menRel.setEnabled(false);
 
         menRelSer.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_DOWN_MASK));
         menRelSer.setText("Serviços");
