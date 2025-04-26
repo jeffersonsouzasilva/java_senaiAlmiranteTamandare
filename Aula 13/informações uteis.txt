@@ -7,3 +7,6 @@ Senha SQL: Sen@i2025
 
 Pesquisar mysql maven
   MySQL Connector Java -> procurar um conector para adicionar ao projeto -> no pom.xml
+
+
+
