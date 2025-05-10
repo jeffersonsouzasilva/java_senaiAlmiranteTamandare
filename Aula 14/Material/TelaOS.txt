@@ -1,0 +1,47 @@
+﻿Criar as labels
+Nº OS
+Data
+*ID
+Nome
+*Equipamento
+*Defeito
+Serviço
+Técnico
+Valor Total
+
+
+Criar os text Field e alterar as variáveis
+Alterar a variável para txtOs
+Alterar a variável para txtData
+Alterar a variável para txtCliId
+Alterar a variável para txtCliPesquisa
+Alterar a variável para txtOsEquip
+Alterar a variável para txtOsDef
+Alterar a variável para txtOsServ
+Alterar a variável para txtOsTec
+Alterar a variável para txtOsValor
+
+
+
+
+Criar os botões:
+Adicionar
+Alterar a variável para btnOsAdicionar
+
+
+Alterar
+Alterar a variável para btnOsAlterar
+
+
+Excluir
+Alterar a variável para btnOsExcluir
+
+
+Atualizar
+Alterar a variável para btnAtualizar
+
+
+
+
+Criar uma tabela
+Alterar a variável para tblOs

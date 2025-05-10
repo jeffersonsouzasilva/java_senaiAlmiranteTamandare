@@ -1,0 +1,11 @@
+﻿Voltamos para o menu da TelaPrincipal, vamos codificar a opção Sair
+Clicar com o botão direito na Opção Sair, Eventos => Action => ActionPerformed, vamos copiar o trecho destacado em amarelo e copiar para o código, atenção ao local que será incluído o código copiado
+
+
+private void MenOpcSaiActionPerformed(java.awt.event.ActionEvent evt) {        
+// Exibe a caixa de dialogo
+        int sair = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja sair ?","Atenção",JOptionPane.YES_NO_OPTION);
+       if(sair == JOptionPane.YES_OPTION) {
+        System.exit(0);
+}
+    }
